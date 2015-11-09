@@ -1,0 +1,8 @@
+extends layout
+
+block content
+	include ./includes/header
+	- var timeStamp=new Date().getTime()
+	script(type="text/javascript" src="/sea-modules/seajs/seajs/2.1.1/sea.js?t=#{timeStamp}")
+	script(type="text/javascript" src="/js/sea.config.js?t=#{timeStamp}")
+	script(type="text/javascript") seajs.use('')
