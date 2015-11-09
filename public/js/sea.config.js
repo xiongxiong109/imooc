@@ -15,28 +15,28 @@ seajs.config({
 		'socket.io'  : '/lib/socket.io/1.3.5/socket.io.min',
 		'ace'        : '/lib/ace/1.0.0/ace',
 
-		'drag'       : '/component/base/drag/drag',
-		'tab'        : '/component/base/tab/tab',
-		'scroll_load': '/component/base/scroll_load/scroll_load',
+		'drag'       : '/js/component/base/drag/drag',
+		'tab'        : '/js/component/base/tab/tab',
+		'scroll_load': '/js/component/base/scroll_load/scroll_load',
 
-		'common'     : '/component/logic/common/common',
-		'login'      : '/component/logic/login/login',
-		'login_sns'  : '/component/logic/login/login-regist',
-		'chat'       : '/component/logic/chat/im',
-		'player'     : '/component/logic/player/player',
-		'ceditor'    : '/component/logic/ceditor/ceditor', //主提交编辑器
-		'publish'    : '/component/logic/publish/publish',
+		'common'     : '/js/component/logic/common/common',
+		'login'      : '/js/component/logic/login/login',
+		'login_sns'  : '/js/component/logic/login/login-regist',
+		'chat'       : '/js/component/logic/chat/im',
+		'player'     : '/js/component/logic/player/player',
+		'ceditor'    : '/js/component/logic/ceditor/ceditor', //主提交编辑器
+		'publish'    : '/js/component/logic/publish/publish',
 
 		'show_data'  : '/page/course/common/show_data',
 		'codeEditor' : '/page/course/common/code_editor',  //基本查看代码
 	    'Module-layer' : '/lib/layer/1.6.0/layer.min.js',
-        'placeholder': '/component/base/placeholder/placeholder.js'
+        'placeholder': '/js/component/base/placeholder/placeholder.js'
 	},
 
 	// 路径配置
 	paths: {
 		'lib': '/lib',
-		'util': '/component/base/util'
+		'util': '/js/component/base/util'
 	},
 
 	// 变量配置
