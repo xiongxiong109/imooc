@@ -15,10 +15,39 @@ script(type="text/javascript" src="/js/sea.config.js?t=#{timeStamp}")
 			li
 				a(href="javascript:void(0);") 社区
 		//- 登录注册
-		.logo-area
-			a(href="javascript:void(0);" class="header-signin") 登录
-			a(href="javascript:void(0);" class="header-signup") 注册
-		//- 下载app
+		- var isLogin=true
+		- var tipsNum=2
+		//- 未登录
+		- if (!isLogin)
+			.login-area
+				a(href="javascript:void(0);" class="header-signin") 登录
+				a(href="javascript:void(0);" class="header-signup") 注册
+		- else
+			.login-area.logined
+				a(href="javascript:void(0);" class="pop-tips" title="我的消息")
+					- if (tipsNum>0)
+						i #{tipsNum}
+				a(href="javascript:void(0);" class="my-header")
+					img(src="/img/user-head.jpg" class="head")
+				.user-card
+					.card-inner
+						.card-top
+							img(src="/img/user-head-mid.jpg" class="card-head-img fl")
+							span(class="user-name") 熊熊109
+							p(class="meta")
+								a(href="javascript:void(0);")
+									| 经验
+									i(class="js-user-mp") 9852
+								a(href="javascript:void(0);")
+									| 积分
+									b(class="js-user-mp") 20
+						.card-links
+							a(href="javascript:void(0);") 我的慕课
+							a(href="javascript:void(0);") 我的社区
+						.card-history
+							span(class="history-class-name") 大神的课堂
+							p(class="history-class-detail") 1-1 大神简介
+							a(href="javascript:void(0);" class="fr") 继续
 		.down-app
 			a(href="javascript:void(0);")
 				i(class="down-phone")
