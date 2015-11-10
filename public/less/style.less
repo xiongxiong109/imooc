@@ -1,14 +1,14 @@
 @import url("./reset.less");
 @import url("./mixins.less");
-
+@import url("./icon.less");
 body{
 	min-width: 1200px;
 }
 .fl{
-	float: left;
+	float: left !important;
 }
 .fr{
-	float: right;
+	float: right !important;
 }
 #header{
 	width:auto;
@@ -97,9 +97,6 @@ body{
 		.my-header{
 			&:hover{
 				background-color: transparent;
-				.head{
-					border-color: #f22c1a;
-				}
 			}
 			.head{
 				vertical-align: middle;
@@ -112,12 +109,31 @@ body{
 		&.logined{
 			position: relative;
 		}
+		.logined-list{
+			.clearfix();
+			li{
+				float: left;
+				.clearfix();
+				&.user-card-list{
+					position: relative;
+					&:hover{
+						& .head{
+							border-color:#f22c1a;
+						}
+						& .user-card{
+							display: block;
+						}
+					}
+				}
+			}
+		}
 		.user-card{
+			display: none;
 			position: absolute;
 			width: 300px;
 			padding-top: 10px;
 			top:100%;
-			right:20px;
+			right:0px;
 			.card-inner{
 				box-shadow:0 4px 8px rgba(0,0,0,0.2);
 				background-color:#fff;
@@ -212,12 +228,18 @@ body{
 				position: relative;
 				padding: 20px 20px 15px 46px;
 				border-bottom: 1px solid #edf1f2;
+				.history-icon{
+					position: absolute;
+					top:20px;
+					left:20px;
+				}
 				.history-class-name{
 					font-size: 12px;
 					line-height:1em;
 					font-weight: bold;
 					display: block;
 					padding-bottom: 12px;
+					.text-overflow();
 				}
 				.history-class-detail{
 					font-size: 10px;
@@ -239,8 +261,20 @@ body{
 					}
 				}
 			}
-			&:before{
-
+			.card-setting{
+				.clearfix();
+				padding: 0 20px;
+				a{
+					color: #787d82;
+					font-size: 12px;
+					line-height: 40px;
+					height: auto;
+					width: auto;
+					&:hover{
+						background-color:transparent;
+						color:#f01400;
+					}
+				}
 			}
 		}
 	}
