@@ -2,4 +2,50 @@ extends layout
 
 block content
 	include ./includes/header
+	include ./includes/banner
+	//- 各种滚动条
+	.index-box.box1
+		.idx-width.inner-box
+			img(src="/img/char-icon1.png" class="icon1")
+			img(src="/img/char-icon2.png" class="icon2")
+			img(src="/img/char-icon3.png" class="icon3")
+	.index-box.box2
+		.idx-width.box-height
+			img(src="/img/01-video.png" class="video")
+			img(src="/img/01-star.png" class="star")
+			img(src="/img/01-text.png" class="text1")
+			div.hide-text 精心制作的视频课程。老师都技术大牛实战派。课程内容接地气，实际工作用得着。
+	.index-box.box3
+		.idx-width.box-height
+			img(src="/img/02-computer2.png" class="computer")
+			img(src="/img/02-text.png" class="text2")
+			div.hide-text 实时交互的在线编程，无需配置任何编程环境，直接就能在线学习编程。省时省力省心。
+	.index-box.box4
+		.idx-width.box-height
+			img(src="/img/03-calendar.png" class="calendar")
+			img(src="/img/03-rockets.png" class="rockets")
+			img(src="/img/03-smoke.png" class="smoke")
+			img(src="/img/03-text.png" class="text3")
+			div.hide-text 循序渐近的学习计划，专治各种学习编程迷茫症。有目标有路径，一切尽在掌握中。
+	.index-box.box5
+		.idx-width.box-height
+			img(src="/img/04-text.png" class="text4")
+			img(src="/img/04-hand.png" class="hand")
+			img(src="/img/04-icon.png" class="icon")
+	//- 广告壳子
+	.class-box
+		.ad-banner
+			ul.idx-width
+				li
+					a(herf="javascript:void(0);")
+						img(src="/img/cache/1.jpg")
+				li
+					a(herf="javascript:void(0);")
+						img(src="/img/cache/2.jpg")
+				li
+					a(herf="javascript:void(0);")
+						img(src="/img/cache/3.jpg")
+		.hot-class-box
+			h2 课程
+			ul.idx-width.hot-class-list
 	script(type="text/javascript") seajs.use('/js/page/index/index')

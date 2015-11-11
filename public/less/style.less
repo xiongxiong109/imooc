@@ -1,6 +1,8 @@
 @import url("./reset.less");
 @import url("./mixins.less");
 @import url("./icon.less");
+@import url("./header.less");
+@import url("./banner.less");
 body{
 	min-width: 1200px;
 }
@@ -10,331 +12,136 @@ body{
 .fr{
 	float: right !important;
 }
-#header{
-	width:auto;
-	height: 60px;
-	background-color: #000000;
-	.clearfix();
-	a{
-		color: #6c7582;
-		&:hover{
-			color: #ffffff;
-			background-color:#363c41;
+.idx-width{//首页主要宽度
+	width: 1200px;
+	margin:0 auto;
+	position: relative;
+}
+.hide-text{
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+// index-box
+.index-box{
+	position: relative;
+	.box-height{
+		height: 400px;
+	}
+	&.box1{
+		background-color: #fff;
+		.inner-box{
+			width: 944px;
+			padding: 50px 128px;
+			text-align: center;
+			.clearfix();
+			.icon1{
+				float: left;
+			}
+			.icon2{
+				float: right;
+			}
 		}
 	}
-	//logo
-	.logo{
-		float: left;
-		.size(115px,60px);
-		.text-overflow();
-		margin: 0 30px;
-		display: block;
-		text-indent: 100%;
-		background: url("/img/logo.png") center center no-repeat;
-		&:hover{
-			background-color: transparent;
+	&.box2{
+		background-color:#eef1f2;
+		.idx-width{
+			img{
+				position: absolute;
+			}
+			.star{
+				top: -20px;
+			}
+			.video{
+				top: -31px;
+			}
+			.text1{
+				top: 164px;
+				right: 114px;
+			}
 		}
 	}
-	//导航列表
-	.list{
-		float: left;
+	&.box3{
+		background-color: #fff;
+		img{
+			position: absolute;
+		}
+		.computer{
+			right: 0;
+			top:-26px;
+		}
+		.text2{
+			top: 164px;
+			left:70px;
+		}
+	}
+	&.box4{
+		background-color: #eef1f2;
+		img{
+			position: absolute;
+		}
+		.rockets{
+			top: -46px;
+			left: 0px;
+		}
+		.smoke{
+			bottom: 0;
+			left: 0;
+		}
+		.calendar{
+			left: 0;
+			top: 0;
+		}
+		.text3{
+			top: 165px;
+			right:165px;
+		}
+	}
+	&.box5{
+		background-color: #fff;
+		img{
+			position: absolute;
+		}
+		.text4{
+			top: 165px;
+			left: 146px;
+		}
+		.hand,.icon{
+			right: 0px;
+			top: -30px;
+		}
+	}
+}
+//index-ad
+.class-box{
+	background-color: #eef1f2;
+}
+.ad-banner{
+	ul{
 		.clearfix();
 		li{
+			width: 400px;
 			float: left;
-			width: 80px;
+			overflow: hidden;
 			a{
-				height: 60px;
-				line-height: 60px;
 				display: block;
-				text-align:center;
-				.transition(background-color 0.3s);
+				.opacity(80);
+				-webkit-transition: opacity 0.3s;
+				-moz-transition: opacity 0.3s;
+				-ms-transition: opacity 0.3s;
+				-o-transition: opacity 0.3s;
+				transition: opacity 0.3s;
 				&:hover{
-					background-color:#363c41;
+					.opacity(100);
 				}
 			}
 		}
 	}
-	//login-area
-	.login-area{
-		float: right;
-		padding-right: 20px;
-		.clearfix();
-		a{
-			display: block;
-			float: left;
-			text-align: center;
-			.square(60px);
-			line-height: 60px;
-			.transition(background-color 0.2s);
-			&.header-signin{
-				&:hover{
-					background-color: #cc0000;
-				}
-			}
-		}
-		//已登录
-		.pop-tips{
-			background: url("/img/icon_msg.png") center center no-repeat;
-			position:relative;
-			&:hover{
-				background-color:#363c41;
-			}
-			i{
-				font-size: 10px;
-				display:block;
-				width: 14px;
-				height: 16px;
-				line-height: 16px;
-				left: 32px;
-				top: 10px;
-				text-align: center;
-				font-style: normal;
-				color: #fff;
-				background-color:#c9394a;
-				position: absolute;
-			}
-		}
-		.my-header{
-			&:hover{
-				background-color: transparent;
-			}
-			.head{
-				vertical-align: middle;
-				width: 28px;
-				height: 28px;
-				border-radius: 22px;
-				border: 2px solid #3e4548;
-			}
-		}
-		&.logined{
-			position: relative;
-		}
-		.logined-list{
-			.clearfix();
-			li{
-				float: left;
-				.clearfix();
-				&.user-card-list{
-					position: relative;
-					&:hover{
-						& .head{
-							border-color:#f22c1a;
-						}
-						& .user-card{
-							display: block;
-						}
-					}
-				}
-			}
-		}
-		.user-card{
-			display: none;
-			position: absolute;
-			width: 300px;
-			padding-top: 10px;
-			top:100%;
-			right:0px;
-			.card-inner{
-				box-shadow:0 4px 8px rgba(0,0,0,0.2);
-				background-color:#fff;
-				.clearfix();
-			}
-			&:before{
-				content: '';
-				width: 0;
-				height: 0;
-				display: block;
-				border: 7px solid #f01400;
-				border-top-width:0;
-				border-bottom-width: 8px;
-				border-top-color: transparent;
-				border-left-color: transparent;
-				border-right-color:transparent;
-				position: absolute;
-				top: 2px;
-				right:23px;
-			}
-			.card-top{
-				padding-left: 100px;
-				height: 100px;
-				background:url("/img/user_card_top.png") 0px 0px no-repeat;
-				.clearfix();
-				.card-head-img{
-					width: 60px;
-					height: 60px;
-					margin: 20px 18px 0 -83px;
-					border: 2px solid #fff;
-					border-radius: 50%;
-					vertical-align: middle;
-				}
-				.user-name,.meta{
-					color: #fff;
-				}
-				.user-name{
-					font-size: 18px;
-					padding-top: 30px;
-					display: block;
-				}
-				.meta{
-					.clearfix();
-					float: left;
-				}
-				.meta a{
-					font-weight: bold;
-					font-size: 12px;
-					color: #fff;
-					width: auto;
-					height: auto;
-					display: inline;
-					line-height:1em;
-					margin-right: 15px;
-					.js-user-mp{
-						font-style: normal;
-					}
-					&:hover{
-						background-color: transparent;
-					}
-				}
-			}
-			.card-links{
-				position: relative;
-				height: 60px;
-				border-bottom: 1px solid #edf1f2;
-				a{
-					width: 150px;
-					font-size: 12px;
-					color:#14191e;
-					font-weight:bold;
-					text-align: left;
-					text-indent: 20px;
-					&:hover{
-						background-color: transparent;
-						color:#cc0000;
-					}
-				}
-				&:after{
-					content: '';
-					width: 1px;
-					height: 30px;
-					display: block;
-					position: absolute;
-					left: 149px;
-					top: 15px;
-					background-color:#edf1f2;
-					z-index: 99;
-				}
-			}
-			.card-history{
-				position: relative;
-				padding: 20px 20px 15px 46px;
-				border-bottom: 1px solid #edf1f2;
-				.history-icon{
-					position: absolute;
-					top:20px;
-					left:20px;
-				}
-				.history-class-name{
-					font-size: 12px;
-					line-height:1em;
-					font-weight: bold;
-					display: block;
-					padding-bottom: 12px;
-					.text-overflow();
-				}
-				.history-class-detail{
-					font-size: 10px;
-					line-height: 1em;
-				}
-				a{
-					position: absolute;
-					top:20px;
-					right:20px;
-					display: inline;
-					line-height: 1em;
-					height: auto;
-					width: auto;
-					color: #f01400;
-					font-size: 12px;
-					&:hover{
-						background-color: transparent;
-						color: #d81200;
-					}
-				}
-			}
-			.card-setting{
-				.clearfix();
-				padding: 0 20px;
-				a{
-					color: #787d82;
-					font-size: 12px;
-					line-height: 40px;
-					height: auto;
-					width: auto;
-					&:hover{
-						background-color:transparent;
-						color:#f01400;
-					}
-				}
-			}
-		}
-	}
-	//download-app
-	.down-app{
-		float: right;
-		a{
-			display: block;
-			padding: 0 8px;
-			height: 60px;
-			line-height: 60px;
-			text-align: center;
-			i{
-				display: inline-block;
-				width: 11px;
-				height: 16px;
-				background:url("/img/head-app-icon.png") 0px 0px no-repeat;
-				vertical-align: -3px; //根据具体情况截图判定,display:inline-block可以用vertical-align属性
-				margin-right: 5px;
-				.transition(background-position 0.3s);
-			}
-			&:hover i{
-				background-position: 0px -16px;
-			}
-		}
-	}
-	// search-area
-	.search-area{
-		float: right;
-		width: 240px;
-		height: 30px;
-		margin: 15px 20px 15px 0;
-		.clearfix();
-		input{
-			.transition(background-color 0.3s);
-		}
-		.search-input{
-			width: 190px;
-			height: 20px;
-			line-height: 20px;
-			font-size: 12px;
-			padding: 5px 10px;
-			float: left;
-			color: #14191e;
-			background-color:#363c41;
-			.placeholder-color(#787d82);
-			//直接用css3实现,因为在之前已经定义了meta头,让ie以最佳的方式渲染
-			&:focus{
-				background-color: #fff;
-			}
-			&:focus + .search-btn{
-				background-color: #fff;
-				background-position:0px -40px;
-			}
-		}
-		.search-btn{
-			width: 30px;
-			height: 30px;
-			float: left;
-			background:#363c41 url("/img/gsearch-sprite.png") 0px 0px no-repeat;
-		}
+}
+ul.hot-class-list{
+	.clearfix();
+	li{
+		width: 280px;
+		margin: 10px;
 	}
 }
