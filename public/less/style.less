@@ -117,6 +117,8 @@ body{
 	background-color: #eef1f2;
 }
 .ad-banner{
+	height: 200px;
+	overflow: hidden;
 	ul{
 		.clearfix();
 		li{
@@ -138,10 +140,99 @@ body{
 		}
 	}
 }
+.hot-class-box{
+	h2{
+		text-align: center;
+		line-height: 111px;
+		font-size: 32px;
+		color: #be3948;
+		font-weight: normal;
+		background: url("/img/course-text.png") center center no-repeat;
+	}
+	.class-all{
+		padding: 40px 0 60px;
+		text-align: center;
+		a{
+			color: #363d40;
+			font-size: 16px;
+			display: inline-block;
+			border-radius: 20px;
+			width: 118px;
+			height: 38px;
+			line-height: 38px;
+			border: 1px solid #d1d7da;
+			.transition(background-color 0.3s);
+			&:hover{
+				background-color: #d0d6d9;
+			}
+		}
+	}
+}
 ul.hot-class-list{
 	.clearfix();
 	li{
 		width: 280px;
 		margin: 10px;
+		float: left;
+		box-shadow: 0px 2px 2px #e0e1e2;
+		cursor: pointer;
+		position: relative;
+		&:hover{
+			.hot-list-title{
+				img{
+					.scale(1.2);
+				}
+			}
+			.list-hover-text{
+				.opacity(100);
+				z-index: 99;
+			}
+		}
+		.hot-list-title{
+			height:160px;
+			overflow: hidden;
+			img{
+				.transition(0.3s);
+			}
+		}
+		.list-active-text{
+			padding: 0 14px 16px;
+			background-color: #fff;
+			.clearfix();
+			p{
+				line-height: 50px;
+				font-size: 12px;
+				color: #363d40;
+				text-align: center;
+			}
+			span{
+				color: #b4bbbf;
+				font-size: 12px;
+				line-height: 1em;
+			}
+		}
+		.list-hover-text{
+			width:252px;
+			position: absolute;
+			bottom:0;
+			left: 0;
+			background-color: #fff;
+			padding: 0 14px 16px;
+			.clearfix();
+			.opacity(0);
+			.transition(opacity 0.3s);
+			z-index:0;
+			p{
+				font-size: 12px;
+				color: #656e73;
+				line-height: 40px;
+				padding-bottom: 10px;
+			}
+			span{
+				font-size: 12px;
+				line-height: 1em;
+				color: #b4bbbf;
+			}
+		}
 	}
 }

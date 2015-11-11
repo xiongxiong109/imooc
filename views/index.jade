@@ -36,16 +36,26 @@ block content
 	.class-box
 		.ad-banner
 			ul.idx-width
-				li
-					a(herf="javascript:void(0);")
-						img(src="/img/cache/1.jpg")
-				li
-					a(herf="javascript:void(0);")
-						img(src="/img/cache/2.jpg")
-				li
-					a(herf="javascript:void(0);")
-						img(src="/img/cache/3.jpg")
+				for ad in ads
+					li
+						a(href="#{ad.url}")
+							img(src="#{ad.imgSrc}")
 		.hot-class-box
-			h2 课程
+			h2.hide-text 课程
 			ul.idx-width.hot-class-list
+				for list in cls
+					li
+						a(herf="#{list.link}")
+							.hot-list-title
+								img(src="#{list.banner}")
+							.list-active-text
+								p #{list.activeTitle}
+								span.fl #{list.update}前更新
+								span.fr #{list.people}人学习
+							.list-hover-text
+								p #{list.hoverTitle}
+								span.fl 更新至#{list.hoverUpdate}
+								span.fr 课程时长 : #{list.classTime}
+			.class-all
+				a(href="javascript:void(0);") 全部课程
 	script(type="text/javascript") seajs.use('/js/page/index/index')
