@@ -95,11 +95,14 @@ define(function(require,exports,module){
 	//showScrolls,滚动动画
 	(function(){
 		var oArr=$(".index-box");
+
 		for(var i=0;i<oArr.length;i++){
 			oArr[i].index=i;
 		}
 		$(window).on('scroll',checkScroll);
-		$(window).trigger('scroll');
+		for(var i=0;i<oArr.length;i++){
+			$(window).trigger('scroll');
+		}
 		//检测滚动
 		function checkScroll(){
 			var scrollTop=$(window).height()+$(window).scrollTop();
@@ -108,7 +111,7 @@ define(function(require,exports,module){
 			}
 			else{
 				for(var i=0;i<oArr.length;i++){
-					if(scrollTop>=$(oArr[i]).offset().top){
+					if(scrollTop>=$(oArr[i]).offset().top+$(oArr[i]).height()/2){
 						runAnimate(oArr[i]);
 						oArr.splice(i,1);
 						break;
@@ -119,7 +122,7 @@ define(function(require,exports,module){
 		//执行动画
 		function runAnimate(obj){
 			switch(obj.index){
-				case 0:{
+				case 0:
 					var oImgs=$(obj).find('img');
 					oImgs.css('position','relative');
 					oImgs.each(function(idx,ele){
@@ -131,9 +134,23 @@ define(function(require,exports,module){
 							'top':0,
 							'opacity':1
 						},500,'swing');
-					});
+					});break;
+				case 1:
+					var $star=$(obj).find('.star');
+					var $txt=$(obj).find('.text1');
+					var $video=$(obj).find('.video');
+					$star.css('opacity',0)
+					.delay(500)
+					.animate({'opacity':1});
+					$txt
+					.css({'top':150,'opacity':0})
+					.delay(180)
+					.animate({'opacity':1,'top':164});
+					$video
+					.css({'opacity':0,'top':0})
+					.delay(100)
+					.animate({'opacity':1,'top':-31},600);
 					break;
-				}
 			}
 		}
 	})();
