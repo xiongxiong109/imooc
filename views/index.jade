@@ -32,14 +32,15 @@ block content
 			img(src="/img/04-text.png" class="text4")
 			img(src="/img/04-hand.png" class="hand")
 			img(src="/img/04-icon.png" class="icon")
-	//- 广告壳子
 	.class-box
+		//- 广告壳子
 		.ad-banner
 			ul.idx-width
 				for ad in ads
 					li
 						a(href="#{ad.url}")
 							img(src="#{ad.imgSrc}")
+		//- 课程
 		.hot-class-box
 			h2.hide-text 课程
 			ul.idx-width.hot-class-list
@@ -58,4 +59,490 @@ block content
 								span.fr 课程时长 : #{list.classTime}
 			.class-all
 				a(href="javascript:void(0);") 全部课程
+		//- 慕课大家庭(js动态渲染,teacher占大格,学生占小格)
+		.mooc-family#js-family
+			.family-mask
+				.hide-text 慕课大家庭
+			.family-text
+				img(src="/img/family-text.png")
+			.idx-width.member-container
+				ul.family-list
+					li.family-li.family-teacher
+						a(href="javascript:void(0);")
+							.list-mask
+							img(src="/img/cache/teacher.jpg" width="200" height="200")
+						.family-info.info-lg.info-left
+							.teacher-intro
+								h3 Ranqo
+								span PHP开发工程师
+							.teacher-detail
+								p
+									| 多玩技术部基础平台组技术经理，PHP官方PECL开发组成员，Swoole开源项目创始人，前腾讯朋友网、易迅网、淘宝网搜索的后台团队核心技术骨干。
+					li.family-li
+						ul.student-list
+							li
+								a(href="javascript:void(0);")
+									.list-mask
+									img(src="/img/cache/s1.jpg" width="100" height="100")
+								.family-info.info-sm.info-left
+									.student-intro
+										h3 小小酱油熊
+										span 页面仔
+									.student-detail
+										.l
+											span 学习
+											em 371小时37分
+										.r
+											span 报名
+											em 15门课程
+							li
+								a(href="javascript:void(0);")
+									.list-mask
+									img(src="/img/cache/s2.jpg" width="100" height="100")
+								.family-info.info-sm.info-left
+									.student-intro
+										h3 小小酱油熊
+										span 页面仔
+									.student-detail
+										.l
+											span 学习
+											em 371小时37分
+										.r
+											span 报名
+											em 15门课程
+							li
+								a(href="javascript:void(0);")
+									.list-mask
+									img(src="/img/cache/s3.jpg" width="100" height="100")
+								.family-info.info-sm.info-left
+									.student-intro
+										h3 小小酱油熊
+										span 页面仔
+									.student-detail
+										.l
+											span 学习
+											em 371小时37分
+										.r
+											span 报名
+											em 15门课程
+							li
+								a(href="javascript:void(0);")
+									.list-mask
+									img(src="/img/cache/s4.jpg" width="100" height="100")
+								.family-info.info-sm.info-left
+									.student-intro
+										h3 小小酱油熊
+										span 页面仔
+									.student-detail
+										.l
+											span 学习
+											em 371小时37分
+										.r
+											span 报名
+											em 15门课程
+					li.family-li.family-teacher
+						a(href="javascript:void(0);")
+							.list-mask
+							img(src="/img/cache/teacher.jpg" width="200" height="200")
+						.family-info.info-lg.info-left
+							.teacher-intro
+								h3 Ranqo
+								span PHP开发工程师
+							.teacher-detail
+								p
+									| 多玩技术部基础平台组技术经理，PHP官方PECL开发组成员，Swoole开源项目创始人，前腾讯朋友网、易迅网、淘宝网搜索的后台团队核心技术骨干。
+					li.family-li
+						ul.student-list
+							li
+								a(href="javascript:void(0);")
+									.list-mask
+									img(src="/img/cache/s1.jpg" width="100" height="100")
+								.family-info.info-sm.info-left
+									.student-intro
+										h3 小小酱油熊
+										span 页面仔
+									.student-detail
+										.l
+											span 学习
+											em 371小时37分
+										.r
+											span 报名
+											em 15门课程
+							li
+								a(href="javascript:void(0);")
+									.list-mask
+									img(src="/img/cache/s2.jpg" width="100" height="100")
+								.family-info.info-sm.info-left
+									.student-intro
+										h3 小小酱油熊
+										span 页面仔
+									.student-detail
+										.l
+											span 学习
+											em 371小时37分
+										.r
+											span 报名
+											em 15门课程
+							li
+								a(href="javascript:void(0);")
+									.list-mask
+									img(src="/img/cache/s3.jpg" width="100" height="100")
+								.family-info.info-sm.info-left
+									.student-intro
+										h3 小小酱油熊
+										span 页面仔
+									.student-detail
+										.l
+											span 学习
+											em 371小时37分
+										.r
+											span 报名
+											em 15门课程
+							li
+								a(href="javascript:void(0);")
+									.list-mask
+									img(src="/img/cache/s4.jpg" width="100" height="100")
+								.family-info.info-sm.info-left
+									.student-intro
+										h3 小小酱油熊
+										span 页面仔
+									.student-detail
+										.l
+											span 学习
+											em 371小时37分
+										.r
+											span 报名
+											em 15门课程
+					li.family-li.family-teacher
+						a(href="javascript:void(0);")
+							.list-mask
+							img(src="/img/cache/teacher.jpg" width="200" height="200")
+						.family-info.info-lg.info-left
+							.teacher-intro
+								h3 Ranqo
+								span PHP开发工程师
+							.teacher-detail
+								p
+									| 多玩技术部基础平台组技术经理，PHP官方PECL开发组成员，Swoole开源项目创始人，前腾讯朋友网、易迅网、淘宝网搜索的后台团队核心技术骨干。
+					li.family-li
+						ul.student-list
+							li
+								a(href="javascript:void(0);")
+									.list-mask
+									img(src="/img/cache/s1.jpg" width="100" height="100")
+								.family-info.info-sm.info-left
+									.student-intro
+										h3 小小酱油熊
+										span 页面仔
+									.student-detail
+										.l
+											span 学习
+											em 371小时37分
+										.r
+											span 报名
+											em 15门课程
+							li
+								a(href="javascript:void(0);")
+									.list-mask
+									img(src="/img/cache/s2.jpg" width="100" height="100")
+								.family-info.info-sm.info-left
+									.student-intro
+										h3 小小酱油熊
+										span 页面仔
+									.student-detail
+										.l
+											span 学习
+											em 371小时37分
+										.r
+											span 报名
+											em 15门课程
+							li
+								a(href="javascript:void(0);")
+									.list-mask
+									img(src="/img/cache/s3.jpg" width="100" height="100")
+								.family-info.info-sm.info-left
+									.student-intro
+										h3 小小酱油熊
+										span 页面仔
+									.student-detail
+										.l
+											span 学习
+											em 371小时37分
+										.r
+											span 报名
+											em 15门课程
+							li
+								a(href="javascript:void(0);")
+									.list-mask
+									img(src="/img/cache/s4.jpg" width="100" height="100")
+								.family-info.info-sm.info-left
+									.student-intro
+										h3 小小酱油熊
+										span 页面仔
+									.student-detail
+										.l
+											span 学习
+											em 371小时37分
+										.r
+											span 报名
+											em 15门课程
+					li.family-li
+						ul.student-list
+							li
+								a(href="javascript:void(0);")
+									.list-mask
+									img(src="/img/cache/s1.jpg" width="100" height="100")
+								.family-info.info-sm.info-left
+									.student-intro
+										h3 小小酱油熊
+										span 页面仔
+									.student-detail
+										.l
+											span 学习
+											em 371小时37分
+										.r
+											span 报名
+											em 15门课程
+							li
+								a(href="javascript:void(0);")
+									.list-mask
+									img(src="/img/cache/s2.jpg" width="100" height="100")
+								.family-info.info-sm.info-left
+									.student-intro
+										h3 小小酱油熊
+										span 页面仔
+									.student-detail
+										.l
+											span 学习
+											em 371小时37分
+										.r
+											span 报名
+											em 15门课程
+							li
+								a(href="javascript:void(0);")
+									.list-mask
+									img(src="/img/cache/s3.jpg" width="100" height="100")
+								.family-info.info-sm.info-left
+									.student-intro
+										h3 小小酱油熊
+										span 页面仔
+									.student-detail
+										.l
+											span 学习
+											em 371小时37分
+										.r
+											span 报名
+											em 15门课程
+							li
+								a(href="javascript:void(0);")
+									.list-mask
+									img(src="/img/cache/s4.jpg" width="100" height="100")
+								.family-info.info-sm.info-left
+									.student-intro
+										h3 小小酱油熊
+										span 页面仔
+									.student-detail
+										.l
+											span 学习
+											em 371小时37分
+										.r
+											span 报名
+											em 15门课程
+					li.family-li.family-teacher
+						a(href="javascript:void(0);")
+							.list-mask
+							img(src="/img/cache/teacher.jpg" width="200" height="200")
+						.family-info.info-lg.info-left
+							.teacher-intro
+								h3 Ranqo
+								span PHP开发工程师
+							.teacher-detail
+								p
+									| 多玩技术部基础平台组技术经理，PHP官方PECL开发组成员，Swoole开源项目创始人，前腾讯朋友网、易迅网、淘宝网搜索的后台团队核心技术骨干。
+					li.family-li
+						ul.student-list
+							li
+								a(href="javascript:void(0);")
+									.list-mask
+									img(src="/img/cache/s1.jpg" width="100" height="100")
+								.family-info.info-sm.info-left
+									.student-intro
+										h3 小小酱油熊
+										span 页面仔
+									.student-detail
+										.l
+											span 学习
+											em 371小时37分
+										.r
+											span 报名
+											em 15门课程
+							li
+								a(href="javascript:void(0);")
+									.list-mask
+									img(src="/img/cache/s2.jpg" width="100" height="100")
+								.family-info.info-sm.info-left
+									.student-intro
+										h3 小小酱油熊
+										span 页面仔
+									.student-detail
+										.l
+											span 学习
+											em 371小时37分
+										.r
+											span 报名
+											em 15门课程
+							li
+								a(href="javascript:void(0);")
+									.list-mask
+									img(src="/img/cache/s3.jpg" width="100" height="100")
+								.family-info.info-sm.info-left
+									.student-intro
+										h3 小小酱油熊
+										span 页面仔
+									.student-detail
+										.l
+											span 学习
+											em 371小时37分
+										.r
+											span 报名
+											em 15门课程
+							li
+								a(href="javascript:void(0);")
+									.list-mask
+									img(src="/img/cache/s4.jpg" width="100" height="100")
+								.family-info.info-sm.info-left
+									.student-intro
+										h3 小小酱油熊
+										span 页面仔
+									.student-detail
+										.l
+											span 学习
+											em 371小时37分
+										.r
+											span 报名
+											em 15门课程
+					li.family-li.family-teacher
+						a(href="javascript:void(0);")
+							.list-mask
+							img(src="/img/cache/teacher.jpg" width="200" height="200")
+						.family-info.info-lg.info-left
+							.teacher-intro
+								h3 Ranqo
+								span PHP开发工程师
+							.teacher-detail
+								p
+									| 多玩技术部基础平台组技术经理，PHP官方PECL开发组成员，Swoole开源项目创始人，前腾讯朋友网、易迅网、淘宝网搜索的后台团队核心技术骨干。
+					li.family-li
+						ul.student-list
+							li
+								a(href="javascript:void(0);")
+									.list-mask
+									img(src="/img/cache/s1.jpg" width="100" height="100")
+								.family-info.info-sm.info-left
+									.student-intro
+										h3 小小酱油熊
+										span 页面仔
+									.student-detail
+										.l
+											span 学习
+											em 371小时37分
+										.r
+											span 报名
+											em 15门课程
+							li
+								a(href="javascript:void(0);")
+									.list-mask
+									img(src="/img/cache/s2.jpg" width="100" height="100")
+								.family-info.info-sm.info-left
+									.student-intro
+										h3 小小酱油熊
+										span 页面仔
+									.student-detail
+										.l
+											span 学习
+											em 371小时37分
+										.r
+											span 报名
+											em 15门课程
+							li
+								a(href="javascript:void(0);")
+									.list-mask
+									img(src="/img/cache/s3.jpg" width="100" height="100")
+								.family-info.info-sm.info-left
+									.student-intro
+										h3 小小酱油熊
+										span 页面仔
+									.student-detail
+										.l
+											span 学习
+											em 371小时37分
+										.r
+											span 报名
+											em 15门课程
+							li
+								a(href="javascript:void(0);")
+									.list-mask
+									img(src="/img/cache/s4.jpg" width="100" height="100")
+								.family-info.info-sm.info-left
+									.student-intro
+										h3 小小酱油熊
+										span 页面仔
+									.student-detail
+										.l
+											span 学习
+											em 371小时37分
+										.r
+											span 报名
+											em 15门课程
+					li.family-li.family-teacher
+						a(href="javascript:void(0);")
+							.list-mask
+							img(src="/img/cache/teacher.jpg" width="200" height="200")
+						.family-info.info-lg.info-left
+							.teacher-intro
+								h3 Ranqo
+								span PHP开发工程师
+							.teacher-detail
+								p
+									| 多玩技术部基础平台组技术经理，PHP官方PECL开发组成员，Swoole开源项目创始人，前腾讯朋友网、易迅网、淘宝网搜索的后台团队核心技术骨干。
+		//- app下载
+		.study-download
+			.idx-width
+				.download-title
+					.hide-text 手机慕课,随时随地学习
+					img(src="/img/phone-text.png")
+				.download-btn
+					a(href="javascript:void(0);" class="download-abtn") 手机版
+					a(href="javascript:void(0);" class="download-abtn d-ipad") iPad版
+					a(href="javascript:void(0);" class="download-barcode")
+				.download-slide-img
+					img(src="/img/mk-down-qrcode.png" class="slide-code")
+					img(src="/img/mk-mobile-bg.png" class="slide-mobile")
+		.join-mooc
+			a(href="javascript:void(0);" class="join-btn hide-text") 开始学习
+	//- 首页footer
+	#indexFooter
+		.idx-width
+			.mooc-share
+				a(href="javascript:void(0)" class="share-weibo" title="新浪微博")
+				a(href="javascript:void(0)" class="share-weixin" title="微信")
+					i
+				a(href="javascript:void(0)" class="share-pengyou" title="腾讯微博")
+				a(href="javascript:void(0)" class="share-qq" title="QQ空间")
+			.mooc-about
+				a(href="javascript:void(0)" title="关于我们") 关于我们
+				a(href="javascript:void(0)" title="人才招聘") 人才招聘
+				a(href="javascript:void(0)" title="讲师招募") 讲师招募
+				a(href="javascript:void(0)" title="联系我们") 联系我们
+				a(href="javascript:void(0)" title="意见反馈") 意见反馈
+			.mooc-links
+				span 友情链接:
+				a(href="javascript:void(0)") 360导航
+				a(href="javascript:void(0)") PHP站中文网
+				a(href="javascript:void(0)") hao123
+				a(href="javascript:void(0)") 拉勾网
+				a(href="javascript:void(0)") web开发者
+				a(href="javascript:void(0)") 更多...
+			.mooc-copyRight
+				| Copyright © 2015 imooc.com All Rights Reserved | 京ICP备 13046642号-2
 	script(type="text/javascript") seajs.use('/js/page/index/index')

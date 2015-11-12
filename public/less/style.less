@@ -5,12 +5,19 @@
 @import url("./banner.less");
 body{
 	min-width: 1200px;
+	line-height: 1em;
 }
 .fl{
 	float: left !important;
 }
 .fr{
 	float: right !important;
+}
+.l{
+	float: left;
+}
+.r{
+	float: right;
 }
 .idx-width{//首页主要宽度
 	width: 1200px;
@@ -21,6 +28,7 @@ body{
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
+  height: 0;
 }
 // index-box
 .index-box{
@@ -234,5 +242,304 @@ ul.hot-class-list{
 				color: #b4bbbf;
 			}
 		}
+	}
+}
+
+// 慕课大家庭
+.mooc-family{
+	background:url("/img/family-bg2.png") center center repeat-x;
+	width: 100%;
+	position: relative;
+	.family-mask{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color:#fff;
+		z-index: 996;
+		.opacity(50);
+	}
+	.family-text{
+		text-align: center;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 998;
+		img{
+			position: absolute;
+			top: 50%;
+			left:50%;
+			margin: -23px 0 0 -119px;
+		}
+	}
+	.member-container{
+		position: relative;
+		ul.family-list{
+			.clearfix();
+			li.family-li{
+				float: left;
+				position: relative;
+				width: 200px;
+				height: 200px;
+				.list-mask{
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					z-index: 9;
+					background-color: #fff;
+					.opacity(50);
+					top: 0;
+					left: 0;
+				}
+			}
+			.family-info{
+				background-color: #be3948;
+				position: absolute;
+				top: 0;
+				height: 100%;
+				color: #fff;
+				z-index: 99;
+				display: none;
+			}
+			.info-lg{
+				width: 300px;
+			}
+			.info-sm{
+				width: 200px;
+			}
+			.info-left{
+				left: 100%;
+			}
+			.info-right{
+				right:100%;
+			}
+			.teacher-intro{
+				padding: 23px 20px 27px;
+				h3{
+					font-size: 18px;
+					font-weight: normal;
+					line-height:1em;
+				}
+				span{
+					font-size: 12px;
+					line-height:1em;
+					color: #ec9ba4;
+				}
+			}
+			.teacher-detail{
+				font-size: 12px;
+				color: #f2bcc2;
+				line-height: 20px;
+				padding: 0 20px 36px;
+			}
+			.student-list{
+				.clearfix();
+				li{
+					width: 100px;
+					height: 100px;
+					position: relative;
+					float: right;
+				}
+				.student-intro{
+					padding: 0 20px;
+					h3{
+						font-size: 16px;
+						line-height: 1em;
+						padding:10px 0 0;
+					}
+					span{
+						font-size: 10px;
+						color: #ec9b95;
+						display: block;
+						height: 28px;
+						line-height: 2em;
+					}
+				}
+				.student-detail{
+					.clearfix();
+					padding: 0 20px;
+					div{line-height: 1em;}
+					span{
+						display: block;
+						font-size: 12px;
+						line-height:1em;
+						color: #ec9ba4;
+					}
+					em{
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+}
+//app下载
+.study-download{
+	background: url("/img/mobile-bg.png") repeat;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+	.idx-width{
+		height: 580px;
+	}
+	.download-title{
+		padding: 80px 0 40px;
+	}
+	.download-btn{
+		margin-bottom: 88px;
+		a{
+			display: inline-block;
+			
+		}
+		.download-abtn{
+			width: 158px;
+			height: 38px;
+			line-height: 38px;
+			border: 1px solid #be3948;
+			border-radius:20px;
+			font-size: 14px;
+			color: #be3948;
+			margin: 0 10px;
+			.transition(0.3s);
+			&:hover{
+				background-color: #be3948;
+				color: #fff;
+			}
+		}
+		.download-barcode{
+			width: 18px;
+			height: 18px;
+			vertical-align:-4px;
+			background:url("/img/index2-sprite.png") 0px -27px no-repeat;
+			&:hover{
+				background-position:0px 0px;
+			}
+		}
+	}
+	.download-slide-img{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 307px;
+		img{
+			position: absolute;
+			bottom: 0;
+			.transition(0.3s);
+		}
+		.slide-mobile{
+			left: 198px;
+			.opacity(100);
+		}
+		.slide-code{
+			left: 391px;
+			bottom:0px;
+			.opacity(0);
+		}
+	}
+}
+.join-mooc{
+	background-color: #eef1f2;
+	text-align: center;
+	padding-top: 70px;
+	height: 290px;
+	.join-btn{
+		display: inline-block;
+		width: 220px;
+		height:60px;
+		border-radius: 30px;
+		background:#be3948 url("/img/begin-text.png") center center no-repeat;
+		.transition(0.3s);
+		&:hover{
+			.opacity(90);
+		}
+	}
+}
+
+//首页底部
+#indexFooter{
+	padding:30px 0 15px;
+	background-color: #fff;
+	text-align: center;
+	.mooc-share{
+		padding-bottom: 30px;
+		a{
+			display: inline-block;
+			width: 32px;
+			height: 32px;
+			margin: 0 10px;
+			background-image:url("/img/idx-btm.png");
+			&.share-weibo{
+				background-position: 0px -221px;
+				&:hover{
+					background-position:0px -262px;
+				}
+			}
+			&.share-weixin{
+				background-position: -52px -221px;
+				position: relative;
+				i{
+					// display: inline-block;
+					width: 160px;
+					height: 210px;
+					overflow: hidden;
+					position: absolute;
+					bottom:40px;
+					left:-64px;
+					background: url("/img/idx-btm.png") -7px 0 no-repeat;
+					display: none;
+				}
+				&:hover{
+					background-position:-52px -262px;
+					i{display: inline-block;}
+				}
+			}
+			&.share-pengyou{
+				background-position: -104px -221px;
+				&:hover{
+					background-position:-104px -262px;
+				}
+			}
+			&.share-qq{
+				background-position: -156px -221px;
+				&:hover{
+					background-position:-156px -262px;
+				}
+			}
+		}
+	}
+	.mooc-about{
+		padding-bottom: 29px;
+		border-bottom:1px solid #d0d6d9;
+		a{
+			font-size: 14px;
+			color:#99a1a6;
+			margin: 0 12px;
+			&:hover{
+				color: #be3948;
+			}
+		}
+	}
+	.mooc-links{
+		line-height: 50px;
+		font-size: 14px;
+		border-bottom: 1px solid #edf1f2;
+		span{
+			display: inline-block;
+			font-weight: bold;
+			color: #c8cdd2;
+			margin-right: 13px;
+		}
+		a{
+			color: #c8cdd2;
+			display: inline-block;
+			margin: 0 10px;
+			&:hover{
+				color: #000;
+			}
+		}
+	}
+	.mooc-copyRight{
+		padding-top: 25px;
+		color:#b4bbbf;
+		font-size: 14px;
 	}
 }

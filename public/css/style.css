@@ -20,8 +20,6 @@ a:hover{color:#c9394a}
 a:active{color:#666}
 .clearfix:after{content:'\0020';display:block;height:0;clear:both;visibility:hidden}
 .clearfix{*zoom:1}
-.l{float:left}
-.r{float:right}
 .clear{height:0;overflow:hidden;clear:both}
 .btn.hide,.hide{display:none}
 a.hidefocus{outline:0}
@@ -199,11 +197,13 @@ h5{font-size:14px;line-height:28px}
 .slider-wrap ul.slide-box li .inner a{position:absolute;top:360px;right:80px;font-size:14px;height:14px;line-height:14px;color:#14191e;font-weight:700}
 .slider-wrap ul.slide-box li .inner a i{width:14px;height:14px;display:inline-block;padding-right:6px;vertical-align:-2px;background:url(/img/index/banner_sprite.png) -120px 0 no-repeat}
 .slider-wrap ul.slide-box li .inner .more:hover{opacity:.8;filter:alpha(opacity=80)}
-body{min-width:1200px}
+body{min-width:1200px;line-height:1em}
 .fl{float:left!important}
 .fr{float:right!important}
+.l{float:left}
+.r{float:right}
 .idx-width{width:1200px;margin:0 auto;position:relative}
-.hide-text{text-indent:100%;white-space:nowrap;overflow:hidden}
+.hide-text{text-indent:100%;white-space:nowrap;overflow:hidden;height:0}
 .index-box{position:relative}
 .index-box .box-height{height:400px}
 .index-box.box1{background-color:#fff}
@@ -256,3 +256,69 @@ ul.hot-class-list li .list-hover-text{width:252px;position:absolute;bottom:0;lef
 ul.hot-class-list li .list-hover-text:after{display:table;content:"";clear:both}
 ul.hot-class-list li .list-hover-text p{font-size:12px;color:#656e73;line-height:40px;padding-bottom:10px}
 ul.hot-class-list li .list-hover-text span{font-size:12px;line-height:1em;color:#b4bbbf}
+.mooc-family{background:url(/img/family-bg2.png) center center repeat-x;width:100%;position:relative}
+.mooc-family .family-mask{position:absolute;width:100%;height:100%;background-color:#fff;z-index:996;opacity:.5;filter:alpha(opacity=50)}
+.mooc-family .family-text{text-align:center;position:absolute;width:100%;height:100%;z-index:998}
+.mooc-family .family-text img{position:absolute;top:50%;left:50%;margin:-23px 0 0 -119px}
+.mooc-family .member-container{position:relative}
+.mooc-family .member-container ul.family-list{*zoom:1}
+.mooc-family .member-container ul.family-list:after{display:table;content:"";clear:both}
+.mooc-family .member-container ul.family-list li.family-li{float:left;position:relative;width:200px;height:200px}
+.mooc-family .member-container ul.family-list li.family-li .list-mask{position:absolute;width:100%;height:100%;z-index:9;background-color:#fff;opacity:.5;filter:alpha(opacity=50);top:0;left:0}
+.mooc-family .member-container ul.family-list .family-info{background-color:#be3948;position:absolute;top:0;height:100%;color:#fff;z-index:99;display:none}
+.mooc-family .member-container ul.family-list .info-lg{width:300px}
+.mooc-family .member-container ul.family-list .info-sm{width:200px}
+.mooc-family .member-container ul.family-list .info-left{left:100%}
+.mooc-family .member-container ul.family-list .info-right{right:100%}
+.mooc-family .member-container ul.family-list .teacher-intro{padding:23px 20px 27px}
+.mooc-family .member-container ul.family-list .teacher-intro h3{font-size:18px;font-weight:400;line-height:1em}
+.mooc-family .member-container ul.family-list .teacher-intro span{font-size:12px;line-height:1em;color:#ec9ba4}
+.mooc-family .member-container ul.family-list .teacher-detail{font-size:12px;color:#f2bcc2;line-height:20px;padding:0 20px 36px}
+.mooc-family .member-container ul.family-list .student-list{*zoom:1}
+.mooc-family .member-container ul.family-list .student-list:after{display:table;content:"";clear:both}
+.mooc-family .member-container ul.family-list .student-list li{width:100px;height:100px;position:relative;float:right}
+.mooc-family .member-container ul.family-list .student-list .student-intro{padding:0 20px}
+.mooc-family .member-container ul.family-list .student-list .student-intro h3{font-size:16px;line-height:1em;padding:10px 0 0}
+.mooc-family .member-container ul.family-list .student-list .student-intro span{font-size:10px;color:#ec9b95;display:block;height:28px;line-height:2em}
+.mooc-family .member-container ul.family-list .student-list .student-detail{*zoom:1;padding:0 20px}
+.mooc-family .member-container ul.family-list .student-list .student-detail:after{display:table;content:"";clear:both}
+.mooc-family .member-container ul.family-list .student-list .student-detail div{line-height:1em}
+.mooc-family .member-container ul.family-list .student-list .student-detail span{display:block;font-size:12px;line-height:1em;color:#ec9ba4}
+.mooc-family .member-container ul.family-list .student-list .student-detail em{font-size:12px}
+.study-download{background:url(/img/mobile-bg.png) repeat;text-align:center;overflow:hidden;position:relative}
+.study-download .idx-width{height:580px}
+.study-download .download-title{padding:80px 0 40px}
+.study-download .download-btn{margin-bottom:88px}
+.study-download .download-btn a{display:inline-block}
+.study-download .download-btn .download-abtn{width:158px;height:38px;line-height:38px;border:1px solid #be3948;border-radius:20px;font-size:14px;color:#be3948;margin:0 10px;-webkit-transition:.3s;-moz-transition:.3s;-ms-transition:.3s;-o-transition:.3s;transition:.3s}
+.study-download .download-btn .download-abtn:hover{background-color:#be3948;color:#fff}
+.study-download .download-btn .download-barcode{width:18px;height:18px;vertical-align:-4px;background:url(/img/index2-sprite.png) 0 -27px no-repeat}
+.study-download .download-btn .download-barcode:hover{background-position:0 0}
+.study-download .download-slide-img{position:absolute;bottom:0;left:0;height:307px}
+.study-download .download-slide-img img{position:absolute;bottom:0;-webkit-transition:.3s;-moz-transition:.3s;-ms-transition:.3s;-o-transition:.3s;transition:.3s}
+.study-download .download-slide-img .slide-mobile{left:198px;opacity:1;filter:alpha(opacity=100)}
+.study-download .download-slide-img .slide-code{left:391px;bottom:0;opacity:0;filter:alpha(opacity=0)}
+.join-mooc{background-color:#eef1f2;text-align:center;padding-top:70px;height:290px}
+.join-mooc .join-btn{display:inline-block;width:220px;height:60px;border-radius:30px;background:#be3948 url(/img/begin-text.png) center center no-repeat;-webkit-transition:.3s;-moz-transition:.3s;-ms-transition:.3s;-o-transition:.3s;transition:.3s}
+.join-mooc .join-btn:hover{opacity:.9;filter:alpha(opacity=90)}
+#indexFooter{padding:30px 0 15px;background-color:#fff;text-align:center}
+#indexFooter .mooc-share{padding-bottom:30px}
+#indexFooter .mooc-share a{display:inline-block;width:32px;height:32px;margin:0 10px;background-image:url(/img/idx-btm.png)}
+#indexFooter .mooc-share a.share-weibo{background-position:0 -221px}
+#indexFooter .mooc-share a.share-weibo:hover{background-position:0 -262px}
+#indexFooter .mooc-share a.share-weixin{background-position:-52px -221px;position:relative}
+#indexFooter .mooc-share a.share-weixin i{width:160px;height:210px;overflow:hidden;position:absolute;bottom:40px;left:-64px;background:url(/img/idx-btm.png) -7px 0 no-repeat;display:none}
+#indexFooter .mooc-share a.share-weixin:hover{background-position:-52px -262px}
+#indexFooter .mooc-share a.share-weixin:hover i{display:inline-block}
+#indexFooter .mooc-share a.share-pengyou{background-position:-104px -221px}
+#indexFooter .mooc-share a.share-pengyou:hover{background-position:-104px -262px}
+#indexFooter .mooc-share a.share-qq{background-position:-156px -221px}
+#indexFooter .mooc-share a.share-qq:hover{background-position:-156px -262px}
+#indexFooter .mooc-about{padding-bottom:29px;border-bottom:1px solid #d0d6d9}
+#indexFooter .mooc-about a{font-size:14px;color:#99a1a6;margin:0 12px}
+#indexFooter .mooc-about a:hover{color:#be3948}
+#indexFooter .mooc-links{line-height:50px;font-size:14px;border-bottom:1px solid #edf1f2}
+#indexFooter .mooc-links span{display:inline-block;font-weight:700;color:#c8cdd2;margin-right:13px}
+#indexFooter .mooc-links a{color:#c8cdd2;display:inline-block;margin:0 10px}
+#indexFooter .mooc-links a:hover{color:#000}
+#indexFooter .mooc-copyRight{padding-top:25px;color:#b4bbbf;font-size:14px}
