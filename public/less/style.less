@@ -77,6 +77,7 @@ body{
 		background-color: #fff;
 		img{
 			position: absolute;
+			.opacity(0);
 		}
 		.computer{
 			right: 0;
@@ -91,6 +92,7 @@ body{
 		background-color: #eef1f2;
 		img{
 			position: absolute;
+			.opacity(0);
 		}
 		.rockets{
 			top: -46px;
@@ -113,6 +115,7 @@ body{
 		background-color: #fff;
 		img{
 			position: absolute;
+			.opacity(0);
 		}
 		.text4{
 			top: 165px;
@@ -427,7 +430,7 @@ ul.hot-class-list{
 		img{
 			position: absolute;
 			bottom: 0;
-			.transition(0.3s);
+			.transition(0.3s ease);
 		}
 		.slide-mobile{
 			left: 198px;
@@ -435,7 +438,7 @@ ul.hot-class-list{
 		}
 		.slide-code{
 			left: 391px;
-			bottom:0px;
+			bottom:86px;
 			.opacity(0);
 		}
 	}
@@ -451,7 +454,8 @@ ul.hot-class-list{
 		height:60px;
 		border-radius: 30px;
 		background:#be3948 url("/img/begin-text.png") center center no-repeat;
-		.transition(0.3s);
+		.transition(background-color 0.3s);
+		.opacity(0);
 		&:hover{
 			.opacity(90);
 		}
